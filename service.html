@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- title of HTML document -->
+		<title>Formula 1+1 - Car Info Page</title>
+		<!-- link to external stylesheet -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- link to jquery-->
+		<script
+			  src="https://code.jquery.com/jquery-3.5.1.min.js"
+			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			  crossorigin="anonymous"></script>
+		<!-- link to web stylesheet for the menu icon-->
+		<script src="https://kit.fontawesome.com/01e7e3bd4b.js" crossorigin="anonymous"></script>
+		<!-- link to javascript functions file-->
+		<script src="javascripts.js"></script>
+	</head>
+	<body>
+		<!-- trapezoid class for the css background -->
+		<div class="trapezoid"></div>
+		<nav>
+			<!-- uses the logo id to create the logo on the top left of the page -->
+			<h1 id="logo">Formula 1+1</h1>
+			<ul>
+				<!-- menu icon from fontawesome website  -->
+				<li><a href="#"><i class="fas fa-bars"></i></a>
+					<!-- unordered list of links to pages -->
+					<ul>
+						<!-- links to each page of the website -->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="service.html">Parts of an F1 Car</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="game.html">Quiz</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- main content of page -->
+		<main>
+			<div class= "row">
+				<div class= "column">
+					<!-- info about the F1 car -->
+					<h1>The Engineering</h1>
+					<h2>1. The Engine</h2>
+					<img src=img/powerunit.jpg width="700">
+					<p class="hide" id="engine">Current Formula 1 cars use a hybrid 1.6 liter V6 engine producing over 800 horsepower. The engine works alongside electric energy recovery systems (ERS), which can harness the lost kinetic and heat energy generated from an F1 driver stepping on the brakes approaching corners. These ERS can then convert the energy being released from braking to generate an electric motor which can provide up to another 160 horsepower of boost.</p>
+					<br>
+					<button id="showEngine" class="moreStuffButton">View</button>
+					<h2>2. The Tires</h2>
+					<img src=img/wheel.jpg width="700">
+					<p class="hide" id="tires">In order to be fast, F1 cars need to quickly heat up their tires for better traction and performance. However, when the tire heats up too fast, it's prone to wearing out much more easily, which is why choosing the right tire compound is essential to winning the race. There are 3 main compounds being used as of now, soft, medium, and hard. The soft tires provide the best performance out of the three, but wears out the fastest, while thehard compound lasts the longest, but provides the least amount of traction. The mediums, like their name suggests, are an in between providing average grip, and durability.</p>
+					<br>
+					<button id="showTires" class="moreStuffButton">View</button>
+
+					<h2>2. The Aerodynamics</h2>
+					<img src=img/rearwing.jpg width="700">
+					<p class="hide" id="aero">The most prominant features of an F1 car are their open wheels, and the two massive wing in the front and back that provide massive downforce. These aerodynamic features allow the car to easily cut through the air to reduce drag, while funneling the air to important areas that require cooling, like the car's brakes. The rear wing also has a drag reduction system(DRS) that tilts the wing to become almost parallel with the ground, which provides less resistance at the cost of less downforce.</p>
+					<br>
+					<button id="showAero" class="moreStuffButton">View</button>
+					
+					<!-- youtube video link -->
+					<br>
+					<br>
+					<iframe width="700" height="395" src="https://www.youtube.com/embed/4NG3qZHx1jM" frameborder="0" allowfullscreen></iframe>
+
+
+					<!-- button that runs scrollUp functions which uses jQuery to scroll to top of page -->
+					<button onclick="scrollUp()" class= "quizButtons">Back To Top</button>
+
+				</div>
+			</div>
+		</main>
+	 		<footer>
+				<p id="footer" >Website Author: Xiongfei Zhang</p>
+			</footer> 	
+		</main>
+	</body>
+</html>

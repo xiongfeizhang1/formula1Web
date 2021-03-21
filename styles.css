@@ -1,0 +1,306 @@
+/*removes padding and margin*/
+*{
+	/*removes all margin and padding*/
+	margin: 0;
+	padding: 0;
+
+	/*hides scrollbar*/
+	scrollbar-width: none;
+}
+
+/*adds the azonix font*/
+@font-face{
+	font-family:'azonix';
+	src: url(fonts/Azonix.otf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+body {
+	/*sets the background of the body image to background.jpg in the img folder */
+	background-image: url(img/background.jpg);
+	/* changes dimensions of background to fit screen */
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+/* sets dimensions of the navigation icon bar */
+nav{
+	position:fixed;
+	width:100%;
+	height: 60px;
+	z-index: 1000;
+
+}
+
+/* sets position of the icon of the drop down menu to the right side */
+nav ul{
+	float: right;
+	/*hides bullet point*/
+	list-style: none;
+	padding-right: 12px;
+
+}
+
+
+/*dimensions of the drop down menu*/
+nav ul li a{
+	display: block;
+	font-family: verdana;
+	color: #fff;
+	font-size: 20px;
+	padding: 22px 14px 10px 14px;
+	/*removes the underline from links*/
+	text-decoration: none;
+
+
+}
+
+nav ul li ul {
+	/* this hides the drop down menu when your mouse is not over it */
+	display: none;
+	/* icon position wont change when the drop down menu appears */
+	position: absolute;
+	right: 0px;
+	background-color: #000;
+	padding: 20px;
+	/*hides bullet point*/
+	list-style: none;
+	/* rounded edges for corners */
+	border-radius: 5px 5px 5px 5px;
+
+}
+/* this shows the drop down when your mouse goes over the icon */
+nav ul li:hover ul {
+	display: block;
+
+}
+
+nav ul li ul li a {
+	padding: 12px 0px;
+}
+
+/* changes the background color of the text being hovered over */
+nav ul li ul li a:hover {
+	background-color: #111;
+	padding: 12px 0px;
+	opacity: 0.7;
+
+}
+/*changes the width of the drop down box to fit*/
+nav ul li ul li {
+	width: 180px;
+}
+
+/*general font and padding stuff for paragraphs and headers*/
+h1 {
+	font-family: azonix;
+	color: #dadada;
+	font-size: 300%;
+	font-weight: lighter;
+	
+}
+h2 {
+	font-family: azonix;
+	color: #dadada;
+	font-size: 200%;
+	font-weight: lighter;
+	padding-top: 40px;
+}
+p {
+	font-family: verdana;
+	color:  #dadada;
+	font-size: 150%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: lighter;
+}
+
+
+/* attributes for the column class to show only on the right side of the screen*/
+.row .column {
+	padding-top: 140px;
+	padding-bottom: 40px;
+	float: right;
+	width: 40%;
+}
+
+.trapezoid {
+	right: 0px;
+	/*using vh and vw so the shape has same ratio as the ratio of the screen*/ 
+	border-bottom: 100vh solid #000;
+	border-left: 10vw solid transparent;
+	height: 0;
+	width: 43%;
+	/*creates a dim effect using a trapezoid so the words on the right can be read more easily */
+	opacity: 0.6;
+	/* low z index so the shape is below the words to not dim the letters */
+	z-index: -1;
+	position: fixed;
+}
+/*new background shading for calendar page*/
+.trapezoidCalendar {
+	right: 0px;
+	/*using vh and vw so the shape has same ratio as the ratio of the screen*/ 
+	border-bottom: 100vh solid #000;
+	border-left: 10vw solid transparent;
+	height: 0;
+	width: 75%;
+	/*creates a dim effect using a trapezoid so the words on the right can be read more easily */
+	opacity: 0.6;
+	/* low z index so the shape is below the words to not dim the letters */
+	z-index: -1;
+	position: fixed;
+}
+/*new dimensions for the column on calendar page*/
+.columnCalendar {
+	padding-top: 140px;
+	padding-bottom: 40px;
+	float: right;
+	width: 60%;
+	padding-right: 100px;
+}
+/*uses the ID attribute to create the logo element on the top left of the page with the cool font*/
+#logo{
+	font-family: azonix;
+	color: #fff;
+	font-size: 50px;
+	line-height: 55px;
+	float: left;
+	padding: 20px 20px;
+}
+
+
+/*creates a footer id attribute*/
+#footer{
+	font-family: verdana;
+	color: #a4a4a4;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 7px;
+}
+/*uses the footer tag to create a footer box at the bottom left of the screen*/
+footer{
+
+	bottom: 0px;
+	background-color: black;
+	opacity: .7;
+	text-decoration: none;
+	/*so footer stays at bottom*/
+	position: fixed;
+}
+
+/*outside box of slide show*/
+.carousel{
+	background-color: white;
+	position: relative;
+	width: 1056px;
+	height: 594px;
+	right: 3%;
+	overflow: hidden;
+
+}
+/*css for images inside slide show*/
+.carousel .imageBox{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+/*css for images inside slide show*/
+.carousel .imageBox img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*css for arrow*/
+.carousel #leftArrow, .carousel #rightArrow{
+	width: 50px;
+	position: absolute;
+	left: 0;
+	background-color: #000;
+	height: 72px;
+	top: 40%;
+	opacity: .8;
+
+	/*buttons in front of picture*/
+	z-index: 1;
+
+	border: none;
+	padding: 0;
+	color: #a4a4a4;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.carousel #rightArrow{
+	left: auto;
+	right: 0;
+}
+
+/*hidden initially*/
+.hide{
+	display:none;
+	padding-right: 50px;
+
+}
+
+#contact{
+	font-size: 19px;
+	padding-right: 6px;
+}
+
+/*css for radio buttons and text boxes*/
+#question1{
+	background: rgba(0,0,0,0.5); 
+	font-family: arial;
+	color: rgba(255,255,255,0.9);
+	font-weight: bold;
+	font-size: 20px;
+	padding: 3px;
+	border-color: rgba(255,255,255,0.1);
+}
+/*change placeholder text color to white*/
+::placeholder{
+	color: rgba(255,255,255,0.9);
+}
+/*css for radio buttons and text boxes*/
+.questions{
+	font-family: arial;
+	border: none;
+	padding: 0;
+	color: rgba(255,255,255,0.7);
+	font-weight: bold;
+	font-size: 20px;
+/*css for radio buttons and text boxes*/
+}
+.quizButtons{
+	background: rgba(0,0,0,0.5); 
+	font-family: arial;
+	color: rgba(255,255,255,0.8);
+	font-weight: bold;
+	font-size: 20px;
+	padding: 7px;
+	border-color: rgba(255,255,255,0.1);
+}
+/*show contacts button*/
+#showContact{
+	background: rgba(0,0,0,0.5); 
+	font-family: arial;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 7px;
+	border-color: rgba(255,255,255,0.1);
+}
+/*appearance of buttons that show paragraph*/
+.moreStuffButton{
+	background: rgba(0,0,0,0.5); 
+	font-family: arial;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 7px;
+	border-color: rgba(255,255,255,0.1);
+}

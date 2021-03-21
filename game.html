@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- title of HTML document -->
+		<title>Formula 1+1 - Quiz Game Page</title>
+		<!-- link to external stylesheet -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- link to jquery-->
+		<script
+			  src="https://code.jquery.com/jquery-3.5.1.min.js"
+			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			  crossorigin="anonymous"></script>
+		<!-- link to web stylesheet for the menu icon-->
+		<script src="https://kit.fontawesome.com/01e7e3bd4b.js" crossorigin="anonymous"></script>
+		<!-- link to javascript functions file-->
+		<script src="javascripts.js"></script>	
+	</head>
+	<body>
+		<!-- trapezoid class for the css background -->
+		<div class="trapezoid"></div>
+		<nav>
+			<!-- uses the logo id to create the logo on the top left of the page -->
+			<h1 id="logo">Formula 1+1</h1>
+			<ul>
+				<!-- menu icon from fontawesome website  -->
+				<li><a href="#"><i class="fas fa-bars"></i></a>
+					<!-- unordered list of links to pages -->
+					<ul>
+						<!-- links to each page of the website -->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="service.html">Parts of an F1 Car</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="game.html">Quiz</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<!-- classes to divide text into rows and columns -->
+			<div class= "row">
+				<div class= "column">
+				
+				<h1>Formula 1 Quiz </h1>
+				<br>
+				<br>
+				<!-- first question -->
+				<h2>How many total races did Michael Schumacher win in his career?</h2>
+				<div id="Q1">
+					<img src=img/schumacher.jpg width="500">
+					<br>
+					<!-- a textbox for user to input their answer -->
+					<input id="question1"  placeholder="Enter a Number">
+					<br>
+				</div>
+
+				<h2>What Circuit is this?</h2>
+				<div id="Q2" class="questions">
+					<img src=img/italy.png width="500">
+					<br>
+					<!-- radio buttons for multiple choice, same group so they cant select more than one -->
+					<input id="q2a" name="question2" type="radio" value="Spa Francorchamps">Spa</input>
+					<br>
+					<input id="q2b" name="question2" type="radio" value="Monza">Monza</input>
+					<br>
+					<input id="q2c" name="question2" type="radio" value="Yas Marina">Yas Marina</input>
+					<br>
+					<input id="q2d" name="question2" type="radio" value="Silverstone">Silverstone</input>
+					<br>
+				</div>
+
+				<h2>True/False. Mercedes AMG won the most Constructor Championships</h2>
+				<div id="Q3" class="questions">
+					<img src=img/mercedes.jpg width="500">
+					<br>
+					<!-- radio buttons for multiple choice, same group so they cant select more than one -->
+					<input id="q3a" name="question3" type="radio" value="True">True</input>
+					<br>
+					<input id="q3b" name="question3" type="radio" value="False">False</input>
+					<br>
+					<br>
+				</div>
+					<!-- button that runs the grade function to see whether answers matches correct -->
+					<button onclick="grade()" class= "quizButtons">Submit Answers</button>
+					<br>
+					<br>
+
+				</div>
+			</div>			
+		</main>
+		<!-- info about the author in the footer -->
+ 		<footer>
+			<p id="footer" >Website Author: Xiongfei Zhang</p>
+		</footer> 
+	</body>
+</html>
